@@ -22,5 +22,15 @@ class TestInsertionSortDesc(unittest.TestCase):
         insertion_sort_desc(a)
         self.assertEqual(a, [0, -1, -3, -5])
 
+    def test_empty(self):
+    a = []
+    insertion_sort_desc(a)
+    self.assertEqual(a, [])
+
+    def test_single(self):
+    a = [42]
+    insertion_sort_desc(a)
+    self.assertEqual(a, [42])
+
 if __name__ == "__main__":
     unittest.main()
